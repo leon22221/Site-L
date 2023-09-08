@@ -7,6 +7,16 @@
         body {
             text-align: center; /* Zentriert den Text horizontal */
             font-size: 16px; /* Passe die Schriftgröße an, wie gewünscht */
+            background-color: black; /* Hintergrundfarbe auf Schwarz setzen */
+            color: white; /* Textfarbe auf Weiß setzen */
+        }
+
+        h1 {
+            font-size: 24px; /* Größere Schriftgröße für die Überschrift */
+        }
+
+        p {
+            font-size: 18px; /* Kleinere Schriftgröße für die Textabschnitte */
         }
     </style>
 </head>
