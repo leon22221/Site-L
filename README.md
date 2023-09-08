@@ -19,6 +19,16 @@
         if (ErledigteAufgaben) {
             document.getElementById("ErlAuf").textContent = ErledigteAufgaben;
         }
+        // JavaScript-Code, um den Status und Free Tickets aus der URL abzurufen und anzuzeigen
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        const freeTickets = urlParams.get('free_tickets');
+        if (status) {
+            document.getElementById("status").textContent = status === 'not_completed' ? 'Nicht erledigt' : 'Erledigt';
+        }
+        if (freeTickets) {
+            document.getElementById("freeTickets").textContent = freeTickets;
+        }
     </script>
 </body>
 </html>
