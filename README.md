@@ -1,19 +1,19 @@
-<html>
+<html lang="de">
 <head>
-    <title>Punktevergabe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punkte anzeigen</title>
 </head>
 <body>
     <h1>Leons Statistiken</h1>
-    <p>Du hast <span id="punkte">0</span> Punkte.</p>
+    <p>Deine Punkte sind: <span id="gesammeltePunkte">0</span></p>
 
     <script>
-        // Prüfe, ob der Benutzer bereits Punkte hat (beim Seitenaufruf)
-        let startPunkte = parseInt(localStorage.getItem('punkte')) || 0;
-        document.getElementById('punkte').textContent = startPunkte;
-        
-         document.getElementById('punkte').textContent = aktuellePunkte;
-         
-        // Rufe die Funktion punkteErhoehen auf, um beim Laden der Seite Punkte zu vergeben
+        // JavaScript-Code, um Punkte aus dem Local Storage abzurufen und anzuzeigen
+        const gespeichertePunkte = localStorage.getItem("punkte");
+        if (gespeichertePunkte) {
+            document.getElementById("gesammeltePunkte").textContent = gespeichertePunkte;
+        }
     </script>
 </body>
 </html>
