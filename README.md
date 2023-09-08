@@ -20,7 +20,7 @@
         if (ErledigteAufgaben) {
             document.getElementById("ErlAuf").textContent = ErledigteAufgaben;
         }
-        const FreeTickets = localStorage.getItem("freeTickets");
+        const freeTickets = localStorage.getItem("freeTickets");
         if (freeTickets) {
             document.getElementById("freeTickets").textContent = freeTickets;
         }
