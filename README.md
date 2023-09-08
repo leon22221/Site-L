@@ -10,6 +10,7 @@
 
     <script>
         // JavaScript-Code, um Punkte aus dem Local Storage abzurufen und anzuzeigen
+        localStorage.setItem("punkte", 0); // Punkte im Local Storage auf 0 setzen
         const gespeichertePunkte = localStorage.getItem("punkte");
         if (gespeichertePunkte) {
             document.getElementById("gesammeltePunkte").textContent = gespeichertePunkte;
