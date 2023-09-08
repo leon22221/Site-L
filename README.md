@@ -14,11 +14,11 @@
         // JavaScript-Code, um Punkte aus dem Local Storage abzurufen und anzuzeigen
         const gespeichertePunkte = localStorage.getItem("punkte");
         if (gespeichertePunkte) {
-            document.getElementById("gesammeltePunkte").textContent = gespeichertePunkte;
+            document.getElementById("punkte").textContent = punkte;
         }
         const ErledigteAufgaben = localStorage.getItem("ErlAuf");
-        if (ErledigteAufgaben) {
-            document.getElementById("ErledigteAufgaben").textContent = ErledigteAufgaben;
+        if (ErlAuf) {
+            document.getElementById("ErlAuf").textContent = ErlAuf;
         }
     </script>
 </body>
