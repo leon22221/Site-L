@@ -26,7 +26,7 @@
         if (freeTickets) {
             document.getElementById("freeTickets").textContent = freeTickets;
         }
-         const urlParams = new URLSearchParams(window.location.search);
+      const urlParams = new URLSearchParams(window.location.search);
         const status = urlParams.get('status');
         if (status) {
             if (status === 'not_completed') {
