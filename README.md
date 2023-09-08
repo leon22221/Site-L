@@ -1,3 +1,4 @@
+
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -15,11 +16,10 @@
         if (gespeichertePunkte) {
             document.getElementById("gesammeltePunkte").textContent = gespeichertePunkte;
         }
-                const ErledigteAufgaben = localStorage.getItem("ErlAuf");
+        const ErledigteAufgaben = localStorage.getItem("ErlAuf");
         if (ErledigteAufgaben) {
             document.getElementById("ErledigteAufgaben").textContent = ErledigteAufgaben;
         }
     </script>
 </body>
 </html>
-
