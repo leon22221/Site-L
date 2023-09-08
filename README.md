@@ -9,6 +9,7 @@
             font-size: 16px; /* Passe die Schriftgröße an, wie gewünscht */
             background-color: black; /* Hintergrundfarbe auf Schwarz setzen */
             color: white; /* Textfarbe auf Weiß setzen */
+            margin-top: 20px; /* Verschiebt die Website um 20px nach unten */
         }
 
         h1 {
@@ -17,6 +18,9 @@
 
         p {
             font-size: 18px; /* Kleinere Schriftgröße für die Textabschnitte */
+            border-bottom: 1px solid white; /* Fügt einen weißen Strich unter jedem Text hinzu */
+            padding-bottom: 10px; /* Abstand zwischen Text und Strich */
+            margin-bottom: 20px; /* Abstand zwischen Textabschnitten */
         }
     </style>
 </head>
