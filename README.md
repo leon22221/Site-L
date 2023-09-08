@@ -8,7 +8,6 @@
     <h1>Leons Statistiken</h1>
     <p>Deine Punkte sind: <span id="punkte">0</span></p>
     <p>Erledigte Aufgaben: <span id="ErlAuf">0</span></p>
-    <p>Status: <span id="status">N/A</span></p> <!-- Hier wird der Status angezeigt -->
     <p>Free Tickets: <span id="freeTickets">0</span></p>
 
     <script>
@@ -21,13 +20,7 @@
         if (ErledigteAufgaben) {
             document.getElementById("ErlAuf").textContent = ErledigteAufgaben;
         }
-        // JavaScript-Code, um den Status und Free Tickets aus der URL abzurufen und anzuzeigen
-        const urlParams = new URLSearchParams(window.location.search);
-        const status = urlParams.get('status');
-        const freeTickets = urlParams.get('free_tickets');
-        if (status) {
-            document.getElementById("status").textContent = status === 'not_completed' ? 'Nicht erledigt' : 'Erledigt';
-        }
+        const FreeTickets = localStorage.getItem("freeTickets");
         if (freeTickets) {
             document.getElementById("freeTickets").textContent = freeTickets;
         }
