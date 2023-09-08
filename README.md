@@ -1,22 +1,31 @@
-<html lang="de">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punkte vergeben</title>
+    <title>Punktezähler</title>
 </head>
 <body>
-    <p id="nachricht"></p>
+    <h1>Deine Statistiken</h1>
+    <p>Du hast <span id="punkte">0</span> Punkte.</p>
 
     <script>
-        // JavaScript-Code zur Punktevergabe und Speicherung in einer Variable
-        var benutzername = "Leon";
-        var punkte = 10;
+        // Überprüfen, ob es bereits gespeicherte Punkte gibt
+        let gespeichertePunkte = localStorage.getItem("punkte");
+        if (gespeichertePunkte === null) {
+            gespeichertePunkte = 0;
+        } else {
+            gespeichertePunkte = parseInt(gespeichertePunkte);
+        }
 
-        // Nachricht erstellen
-        var nachricht = "Du hast die Aufgabe erledigt, " + benutzername + ". Du erhältst " + punkte + " Punkte dafür.";
+        // Funktion, um Punkte zu vergeben
+        function vergebePunkte() {
+            gespeichertePunkte += 10;
+            // Die Punkte im HTML aktualisieren
+            document.getElementById("punkte").textContent = gespeichertePunkte;
+            // Die Punkte im localStorage speichern
+            localStorage.setItem("punkte", gespeichertePunkte.toString());
+        }
 
-        // Nachricht anzeigen
-        document.getElementById("nachricht").textContent = nachricht;
+        // Die initialen Punkte im HTML anzeigen
+        document.getElementById("punkte").textContent = gespeichertePunkte;
     </script>
 </body>
 </html>
