@@ -34,14 +34,17 @@
     <script>
         // JavaScript-Code, um Punkte aus dem Local Storage abzurufen und anzuzeigen
         const gespeichertePunkte = localStorage.getItem("punkte");
+         localStorage.setItem("punkte", 0);
         if (gespeichertePunkte) {
             document.getElementById("punkte").textContent = gespeichertePunkte;
         }
         const ErledigteAufgaben = localStorage.getItem("ErlAuf");
+        localStorage.setItem("ErlAuf", 0);
         if (ErledigteAufgaben) {
             document.getElementById("ErlAuf").textContent = ErledigteAufgaben;
         }
         const freeTickets = localStorage.getItem("freeTickets");
+        localStorage.setItem("freeTickets", 0);
         if (freeTickets) {
             document.getElementById("freeTickets").textContent = freeTickets;
         }
