@@ -9,7 +9,7 @@
 
     <script>
         // JavaScript-Code zur Punktevergabe und Speicherung in einer Variable
-        var benutzername = "Malin";
+        var benutzername = "Leon";
         var punkte = 10;
 
         // Nachricht erstellen
