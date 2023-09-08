@@ -30,6 +30,11 @@
         if (status) {
             document.getElementById("status").textContent = status === 'not_completed' ? 'Nicht erledigt' : 'Erledigt';
         }
+          const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        if (status) {
+            document.getElementById("status").textContent = status === 'completed' ? 'Erledigt' : 'Nicht erledigt';
+        }
     </script>
 </body>
 </html>
